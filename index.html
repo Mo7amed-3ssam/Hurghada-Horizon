@@ -19,8 +19,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="HH Horizon">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="icons/logo-1920.png">
+  <link rel="apple-touch-icon" href="icons/logo-1920.png">
   <link rel="manifest" href="manifest.webmanifest">
 
   <!-- Primary Meta -->
@@ -138,12 +138,10 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker
-          .register(new URL('sw.js', document.baseURI), {
-            scope: new URL('./', document.baseURI).href
-          })
-          .catch(function () {});
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        registrations.forEach(function (registration) {
+          registration.unregister();
+        });
       });
     }
   </script>

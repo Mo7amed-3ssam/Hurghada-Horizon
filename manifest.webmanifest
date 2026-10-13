@@ -1,6 +1,6 @@
 {
   "name": "Hurghada Horizon",
-  "short_name": "HH Horizon",
+  "short_name": "Hurghada Horizon",
   "description": "Hurghada tours, Red Sea excursions, and Egypt day trips.",
   "lang": "en",
   "id": "./",
@@ -9,8 +9,13 @@
   "display": "standalone",
   "background_color": "#0A4D68",
   "theme_color": "#0A4D68",
-  "prefer_related_applications": false,
   "icons": [
+    {
+      "src": "icons/logo-1920.png",
+      "sizes": "1920x1920",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "icons/icon-192.png",
       "sizes": "192x192",
@@ -22,12 +27,15 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
-    },
+    }
+  ],
+  "screenshots": [
     {
-      "src": "icons/icon-512.png",
-      "sizes": "512x512",
+      "src": "icons/screenshot-narrow.png",
+      "sizes": "1170x2532",
       "type": "image/png",
-      "purpose": "maskable"
+      "form_factor": "narrow",
+      "label": "Hurghada Horizon"
     }
   ]
 }
